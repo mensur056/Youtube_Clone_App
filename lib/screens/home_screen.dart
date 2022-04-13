@@ -20,23 +20,36 @@ class _HomeScreenState extends State<HomeScreen> {
             width: 150,
             height: 70,
           ),
-          actions:  [
+          actions: [
             const Icon(
               Icons.add_to_queue_sharp,
               color: Colors.grey,
+            ),
+            const SizedBox(
+              width: 15,
             ),
             const Icon(
               Icons.notifications,
               color: Colors.grey,
             ),
+            const SizedBox(
+              width: 15,
+            ),
             const Icon(
               Icons.search,
               color: Colors.grey,
             ),
-            CircleAvatar(backgroundColor: Colors.purpleAccent,
+            const SizedBox(
+              width: 15,
+            ),
+            CircleAvatar(
+              backgroundColor: Colors.purpleAccent,
               radius: 20,
-             child: Image.asset('assets/icons/ic_profile.png'),
-            )
+              child: Image.asset('assets/icons/ic_profile.png'),
+            ),
+            const SizedBox(
+              width: 15,
+            ),
           ],
         ),
       ),
