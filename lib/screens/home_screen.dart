@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
+import '../widgets/video_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -17,19 +18,24 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: buildAppBar(),
         body: SingleChildScrollView(
           child: Column(
-            children: [
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [],
-                ),
+            children: const [
+              VideoBar(),
+              SizedBox(
+                height: 20,
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                child: Column(
-                  children: [],
-                ),
+              VideoBar(),
+              SizedBox(
+                height: 20,
               ),
+              VideoBar(),
+              SizedBox(
+                height: 20,
+              ),
+              VideoBar(),
+              SizedBox(
+                height: 20,
+              ),
+              VideoBar(),
             ],
           ),
         ),
