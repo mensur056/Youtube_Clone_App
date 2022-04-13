@@ -7,17 +7,27 @@ class VideoBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 350,
       width: 450,
-      color: Colors.red,
       child: Column(
         children: [
           Container(
-            height: 300,
-            color: Colors.grey,
+            height: 250,
+            color: Colors.red,
           ),
-          Text('hello world')
+          Container(
+            height: 100,
+            color: Colors.white,
+            child: Row(
+              children: [
+                CircleAvatar(
+                  child: Image.asset('assets/images/im_profile.png'),
+                ),
+                Text('Hello')
+              ],
+            ),
+          )
         ],
       ),
     );
