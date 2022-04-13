@@ -53,22 +53,29 @@ class _HomeScreenState extends State<HomeScreen> {
         width: 110,
       ),
       actions: [
-        const Icon(
-          Icons.add_to_queue_sharp,
-          color: Colors.black,
-          size: iconSize,
+        IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.add_to_queue_sharp,
+            color: Colors.black,
+            size: iconSize,
+          ),
         ),
-        buildSizedBox(),
-        const Icon(
-          Icons.notifications,
-          color: Colors.black,
-          size: iconSize,
+        IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.notifications,
+            color: Colors.black,
+            size: iconSize,
+          ),
         ),
-        buildSizedBox(),
-        const Icon(
-          Icons.search,
-          color: Colors.black,
-          size: iconSize,
+        IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.search,
+            color: Colors.black,
+            size: iconSize,
+          ),
         ),
         buildSizedBox(),
         CircleAvatar(
@@ -83,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   SizedBox buildSizedBox() {
     return const SizedBox(
-      width: 20,
+      width: 10,
     );
   }
 }
