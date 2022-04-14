@@ -115,6 +115,11 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: Colors.white,
       elevation: 0,
       toolbarHeight: 80,
+      iconTheme: IconThemeData(color: Colors.black),
+      leading: IconButton(
+        onPressed: () {},
+        icon: const Icon(Icons.menu),
+      ),
       title: Image.asset(
         'assets/images/im_youtube.png',
         width: 110,
@@ -123,8 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
         IconButton(
           onPressed: () {},
           icon: const Icon(
-            Icons.add_to_queue_sharp,
-            color: Colors.black,
+            Icons.cast,
             size: iconSize,
           ),
         ),
@@ -132,7 +136,6 @@ class _HomeScreenState extends State<HomeScreen> {
           onPressed: () {},
           icon: const Icon(
             Icons.notifications,
-            color: Colors.black,
             size: iconSize,
           ),
         ),
@@ -140,11 +143,10 @@ class _HomeScreenState extends State<HomeScreen> {
           onPressed: () {},
           icon: const Icon(
             Icons.search,
-            color: Colors.black,
             size: iconSize,
           ),
         ),
-        buildSizedBox(),
+
         CircleAvatar(
           backgroundColor: Colors.purpleAccent,
           radius: 16,
