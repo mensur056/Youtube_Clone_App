@@ -12,6 +12,11 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final String explore = 'Explore';
+  final String shortGame = 'Gaming';
+  final String shortMusic = 'Music';
+  final String shortProgram = 'Programming';
+  final String shortMobilePr = 'Mobile development';
+  final String shortVlog = 'Vlog';
 
   @override
   Widget build(BuildContext context) {
@@ -37,14 +42,48 @@ class _HomeScreenState extends State<HomeScreen> {
                 margin: const EdgeInsets.symmetric(vertical: 12),
                 width: double.infinity,
                 height: 40,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    Container(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 5.0, right: 5),
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      Container(
                         margin: const EdgeInsets.only(right: 8),
                         child: FilterChip(
-                            label: const Text('Gaming'), onSelected: (value) {}))
-                  ],
+                            elevation: 0,
+                            label: Text(shortGame),
+                            onSelected: (value) {}),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(right: 8),
+                        child: FilterChip(
+                            elevation: 0,
+                            label: Text(shortMusic),
+                            onSelected: (value) {}),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(right: 8),
+                        child: FilterChip(
+                            elevation: 0,
+                            label: Text(shortProgram),
+                            onSelected: (value) {}),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(right: 8),
+                        child: FilterChip(
+                            elevation: 0,
+                            label: Text(shortMobilePr),
+                            onSelected: (value) {}),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(right: 8),
+                        child: FilterChip(
+                            elevation: 0,
+                            label: Text(shortVlog),
+                            onSelected: (value) {}),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               const VideoBar(),
