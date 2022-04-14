@@ -17,6 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final String shortProgram = 'Programming';
   final String shortMobilePr = 'Mobile development';
   final String shortVlog = 'Vlog';
+  final String recommends = 'Recommends';
 
   @override
   Widget build(BuildContext context) {
@@ -86,6 +87,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  recommends,
+                  style: const TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24),
+                ),
+              ),
               const VideoBar(),
               const SizedBox(
                 height: 20,
@@ -146,7 +157,6 @@ class _HomeScreenState extends State<HomeScreen> {
             size: iconSize,
           ),
         ),
-
         CircleAvatar(
           backgroundColor: Colors.purpleAccent,
           radius: 16,
