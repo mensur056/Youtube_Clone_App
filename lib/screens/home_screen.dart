@@ -11,32 +11,59 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final String explore = 'Explore';
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.grey,
         appBar: buildAppBar(),
         body: SingleChildScrollView(
           child: Column(
-            children: const [
-              VideoBar(),
-              SizedBox(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  explore,
+                  style: const TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24),
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.symmetric(vertical: 12),
+                width: double.infinity,
+                height: 40,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Container(
+                        margin: const EdgeInsets.only(right: 8),
+                        child: FilterChip(
+                            label: const Text('Gaming'), onSelected: (value) {}))
+                  ],
+                ),
+              ),
+              const VideoBar(),
+              const SizedBox(
                 height: 20,
               ),
-              VideoBar(),
-              SizedBox(
+              const VideoBar(),
+              const SizedBox(
                 height: 20,
               ),
-              VideoBar(),
-              SizedBox(
+              const VideoBar(),
+              const SizedBox(
                 height: 20,
               ),
-              VideoBar(),
-              SizedBox(
+              const VideoBar(),
+              const SizedBox(
                 height: 20,
               ),
-              VideoBar(),
+              const VideoBar(),
             ],
           ),
         ),
@@ -47,6 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
   AppBar buildAppBar() {
     return AppBar(
       backgroundColor: Colors.white,
+      elevation: 0,
       toolbarHeight: 80,
       title: Image.asset(
         'assets/images/im_youtube.png',
