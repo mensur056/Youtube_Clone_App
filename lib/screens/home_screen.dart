@@ -117,6 +117,32 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
+        bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Colors.red,
+          unselectedItemColor: Colors.black,
+          items: const [
+            BottomNavigationBarItem(
+              label: 'Home',
+              icon: Icon(Icons.home),
+            ),
+            BottomNavigationBarItem(
+              label: 'Home',
+              icon: Icon(Icons.home),
+            ),
+            BottomNavigationBarItem(
+              label: 'Home',
+              icon: Icon(Icons.home),
+            ),
+            BottomNavigationBarItem(
+              label: 'Home',
+              icon: Icon(Icons.home),
+            ),
+            BottomNavigationBarItem(
+              label: 'Home',
+              icon: Icon(Icons.home),
+            ),
+          ],
+        ),
       ),
     );
   }
