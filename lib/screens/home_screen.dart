@@ -12,6 +12,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final String imageName = 'assets/images/im_youtube.png';
   final String explore = 'Explore';
   final String shortGame = 'Gaming';
   final String shortMusic = 'Music';
@@ -134,7 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
         icon: const Icon(Icons.menu),
       ),
       title: Image.asset(
-        'assets/images/im_youtube.png',
+        imageName,
         width: 110,
       ),
       actions: [
